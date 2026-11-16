@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<title>Untitled Document</title>
+	<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		
+	 <a class="logo">JS</a>
+		<ul>
+		  <li><a class="active">Home</a></li>
+	      <li><a>About</a></li>
+		  <li><a>work</a></li>
+		  <li><a>contact</a></li>	
+		</ul>
+		
+	</header>
+	
+	<section>
+	    <img src="Untitled-a.gif"  id="stars"> 
+        <img src="Untitled-n.gif" id="moon"> 
+        <img src="Untitled-5.gif"  id="mountains_behind">
+		<h3 id="text">Parallax Scrolling</h3>
+		<a  href="#sec" id="btn">Explore</a>
+        <img src="mountains-cghk.gif" id="mountain_front" > 
+	
+
+	</section>
+
+	<div class="sec" id="sec">
+		
+		<h2>What is Parallax Scrolling? </h2>
+
+	<p>	
+		<p>
+			Parallax Scrolling is a web design technique in which
+			background and foreground elements move at different<br>
+			speeds as the user scrolls through a page, creating an
+			illusion of depth and a sense of three-dimensional movement.
+		</p>
+	
+		<br><br>
+	
+		<p>
+			By combining multiple visual layers and carefully
+			controlling their movement, designers can create
+			immersive experiences that make websites feel more
+			dynamic and engaging.
+		</p>
+		<br><br><br><br>
+
+    <h2>How Does It Work?</h2>
+
+    <p>
+        As you scroll down the page, different elements respond
+        to scrolling at different speeds.<br> Background images may
+        move more slowly than foreground content, creating a
+        sense of distance and depth.
+    </p>
+
+    <br><br><br><br>
+
+    <h2>Why Use Parallax?</h2>
+
+    <p>
+        <strong>Visual Depth:</strong>
+        Creates a sense of depth through layered elements.
+    </p>
+
+    <p>
+        <strong>Engagement:</strong>
+        Makes scrolling more interactive and interesting.
+    </p>
+
+    <p>
+        <strong>Visual Storytelling:</strong>
+        Helps guide visitors through a visual narrative.
+    </p>
+
+    <p>
+        <strong>Modern Design:</strong>
+        Adds movement and personality to web experiences.
+    </p>
+
+    <br><br><br><br>
+
+    <h2>Experience the Effect</h2>
+
+    <p>
+        Scroll through this page and observe how different
+        elements move at different speeds.
+        This is Parallax Scrolling in action.
+    </p>
+		
+		<img src="system_a.gif" alt="" style="position:absolute; left:0px; top: 200px; "/>
+	
+
+	
+		
+	</div>
+	             
+
+
+    <script>
+
+     let stars = document.getElementById('stars');
+	 let moon = document.getElementById('moon');
+	 let mountains_behind = document.getElementById('mountains_behind');
+	 let text = document.getElementById('text');
+	 let btn = document.getElementById('btn');
+	 let mountain_front = document.getElementById('mountain_front');
+	 let header = document.querySelector('header');
+
+	 window.addEventListener('scroll', function(){
+		let value = window.scrollY;
+		stars.style.left = value * 0.25 + 'px';
+		moon.style.top = value * 1.05 + 'px';
+		mountains_behind.style.top = value * 0.5 + 'px';
+		mountain_front.style.top = value * 0 + 'px';
+		text.style. marginRight = value * 4 + 'px';
+		text.style. marginTop = value * 1.5 + 'px';
+		btn.style. marginTop = value * 1.5 + 'px';
+		header.style.top = value * 0.5 + 'px';
+	 })
+
+	</script>
+
+</body>
+</html>
